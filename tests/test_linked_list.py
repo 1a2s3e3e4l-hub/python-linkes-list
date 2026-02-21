@@ -49,3 +49,10 @@ def test_clear():
     ll.append(2)
     ll.clear()
 
+def test_contains():
+    ll = linked_list()
+    ll.append("a")
+    ll.append("b")
+
+    assert ll.contains("a") is True
+    assert ll.contains("z") is False
