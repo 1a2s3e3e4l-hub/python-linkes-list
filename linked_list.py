@@ -6,6 +6,9 @@ class linked_list:
     def __init__(self):
         self.head = None
         self.length = 0 
+    
+    def length(self):
+        return self.length
 
     def append(self, data):
         node: Node = Node(data)
@@ -64,9 +67,19 @@ class linked_list:
     def clear (self):
         self.head = None 
         self.length = 0 
-        
-        
 
+        
+# ---------------------------
+# Element Queries
+# ---------------------------
+    def contains(self , value):
+        current = self.head
+        while current :
+            if current.data == value:
+                return True
+            current= current.next
+        return False
+    
 
 
 
