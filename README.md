@@ -4,7 +4,7 @@ A from-scratch implementation of a **singly linked list** in Python.
 
 This project is designed to strengthen understanding of:
 
-- Data structures
+- Data structuresg
 - Pointers (references)
 - Algorithmic thinking
 - Object-oriented design
