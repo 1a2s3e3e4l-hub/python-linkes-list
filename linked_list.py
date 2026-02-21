@@ -60,6 +60,11 @@ class linked_list:
         
         self.length -= 1
         return removed_data
+
+    def clear (self):
+        self.head = None 
+        self.length = 0 
+        
         
 
 
