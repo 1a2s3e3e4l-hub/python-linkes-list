@@ -102,6 +102,11 @@ class LinkedList:
 
         return -1
 
+    def for_each(self, action):
+        current = self.head
+        while current:
+            action(current.data)
+            current = current.next
 
 
   
