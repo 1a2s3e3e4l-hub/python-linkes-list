@@ -10,13 +10,24 @@ class LinkedList:
     def length(self):
         return self.length
 
-    def append(self, data):
+    def prepend(self, data):
         node: Node = Node(data)
         if self.head is None:
             self.head = node
         else:
             node.next = self.head
             self.head = node
+        self.length += 1
+
+    def append(self, data):
+        new_node = Node(data)
+        if self.head is None:
+            self.head = new_node
+        else:
+            current = self.head
+            while current.next:
+                current = current.next
+            current.next = new_node
         self.length += 1
 
 
@@ -68,7 +79,7 @@ class LinkedList:
         self.head = None 
         self.length = 0 
 
-        
+           
 # ---------------------------
 # Element Queries
 # ---------------------------
@@ -88,9 +99,12 @@ class LinkedList:
                 return index
             current =current.next
             index += 1
+
         return -1
 
 
+
+  
 
 
    
