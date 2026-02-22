@@ -61,7 +61,7 @@ def test_index_of():
     ll.append(5)   
     ll.append(10) 
 
-    # الفحص الصحيح:
+   
     assert ll.index_of(10) == 1  
     assert ll.index_of(5) == 0  
     assert ll.index_of(999) == -1
