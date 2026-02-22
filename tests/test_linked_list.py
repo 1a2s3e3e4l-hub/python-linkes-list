@@ -58,10 +58,10 @@ def test_contains():
 
 def test_index_of():
     ll = LinkedList()
-    ll.append(5)   # هذا سيأخذ index 0
-    ll.append(10)  # هذا سيأخذ index 1
+    ll.append(5)   
+    ll.append(10) 
 
     # الفحص الصحيح:
-    assert ll.index_of(10) == 1  # الـ 10 هي العنصر الثاني
-    assert ll.index_of(5) == 0   # الـ 5 هي العنصر الأول
+    assert ll.index_of(10) == 1  
+    assert ll.index_of(5) == 0  
     assert ll.index_of(999) == -1
