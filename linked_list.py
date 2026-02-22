@@ -144,5 +144,22 @@ class LinkedList:
 
   
 
+    def __str__(self):
+        if not self.head:
+            return "Empty List"
+        
+        nodes = []
+        current = self.head
+        while current:
+            nodes.append(str(current.data))
+            current = current.next
+        
+        return " -> ".join(nodes) + " -> None"
 
-   
+
+ll = LinkedList()
+ll.append(1)
+ll.append(2)
+ll.append(3)
+
+print(ll)  
