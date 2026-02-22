@@ -101,6 +101,9 @@ class LinkedList:
             index += 1
 
         return -1
+# ---------------------------
+# Functional Methods
+# ---------------------------
 
     def for_each(self, action):
         current = self.head
