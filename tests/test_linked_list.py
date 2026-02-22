@@ -76,3 +76,30 @@ def test_for_each_multiplication():
     ll.for_each(lambda x: doubled.append(x * 2))
 
     assert doubled == [20, 40]
+
+
+def test_map():
+    ll = LinkedList()
+    ll.append(1)
+    ll.append(2)
+    ll.append(3)
+
+    new_list = ll.map(lambda x: x * 2)
+
+    assert new_list[0] == 2
+    assert new_list[1] == 4
+    assert new_list[2] == 6
+
+
+def test_where():
+    ll = LinkedList()
+    ll.append(1)
+    ll.append(2)
+    ll.append(3)
+    ll.append(4)
+
+    evens = ll.where(lambda x: x % 2 == 0)
+
+    assert evens.length == 2
+    assert evens[0] == 2
+    assert evens[1] == 4
