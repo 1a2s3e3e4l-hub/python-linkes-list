@@ -80,6 +80,16 @@ class linked_list:
             current= current.next
         return False
     
+    def index_of(self,value):
+        current = self.head
+        index = 0
+        while current :
+            if current.data == value :
+                return index
+            current =current.next
+            index += 1
+        return -1
+
 
 
 
