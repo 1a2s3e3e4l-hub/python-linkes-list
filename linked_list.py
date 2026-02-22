@@ -111,6 +111,36 @@ class LinkedList:
             action(current.data)
             current = current.next
 
+    def map(self, transform):
+        new_list = LinkedList()
+        current = self.head
+        while current:
+            transformed_data = transform(current.data)
+            new_list.append(transformed_data)
+            current = current.next
+        return new_list
+
+    def where(self, test):
+        new_list = LinkedList()
+        current = self.head
+        while current:
+            if test(current.data):
+                new_list.append(current.data)
+            current = current.next
+        return new_list
+
+    def __getitem__(self, index):
+        """تسمح بالوصول للعناصر باستخدام القوسين [ ]"""
+        # التأكد أن الأندكس ضمن الحدود
+        if index < 0 or index >= self.length:
+            raise IndexError("Index out of range")
+        
+        current = self.head
+        # التحرك حتى الوصول للموقع المطلوب
+        for _ in range(index):
+            current = current.next
+            
+        return current.data
 
   
 
